@@ -8,7 +8,7 @@ export const ProductItemDescription = ({
 }) => (
 	<div>
 		<div>
-			<h3 className="text-sm font-semibold text-gray-700">{name}</h3>
+			<h1 className="text-sm font-semibold text-gray-700">{name}</h1>
 			<p className="text-sm text-gray-500">
 				<span className="sr-only">Kategoria:</span> {category}
 			</p>

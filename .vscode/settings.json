@@ -7,8 +7,11 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"[jsonc]": {
+	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[mdx]": {
+		"editor.defaultFormatter": "unifiedjs.vscode-mdx"
 	},
 	"tailwindCSS.classAttributes": ["className", "tw", "clerkAppearance.*"],
 	"typescript.preferences.importModuleSpecifier": "non-relative",

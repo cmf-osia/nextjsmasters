@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { type ReactNode } from "react";
 import { ActiveLink } from "@/ui/atoms/ActiveLink";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,22 +14,26 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode;
+	children: ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${inter.className} h-full`}>
+		<html lang="en" className="min-h-screen">
+			<body className={`${inter.className} min-h-screen`}>
 				<header className="pt-8">
-					<h1 className="text-center text-4xl font-bold">Shop</h1>
+					<h2 className="text-center text-4xl font-bold">Shop</h2>
 				</header>
 
 				<nav className="my-2 flex justify-center space-x-4">
 					<ul className="flex space-x-4">
 						<li>
-							<ActiveLink href="/">Home</ActiveLink>
+							<ActiveLink href="/" aria-current="page">
+								Home
+							</ActiveLink>
 						</li>
 						<li>
-							<ActiveLink href="/products">Products</ActiveLink>
+							<ActiveLink href="/products" aria-current="page">
+								All
+							</ActiveLink>
 						</li>
 					</ul>
 				</nav>
@@ -36,7 +41,7 @@ export default function RootLayout({
 				<section className="sm:max-w2xl mx-auto max-w-md px-12 py-8 md:max-w-4xl lg:max-w-7xl">
 					{children}
 				</section>
-				<footer className="absolute bottom-0 w-full px-4 py-2 text-left font-mono">
+				<footer className="sticky top-[100vh] w-full px-4 py-2 text-left font-mono">
 					<p>© 2024 Copyright: Shop</p>
 				</footer>
 			</body>
