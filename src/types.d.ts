@@ -11,6 +11,7 @@ export interface ProductDescription {
 	name: string;
 	category: string;
 	price: number;
+	description: string;
 }
 
 export interface ProductItem extends Entity, ProductDescription {

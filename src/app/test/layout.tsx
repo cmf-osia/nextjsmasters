@@ -1,5 +1,5 @@
-import { type LayoutProps } from "../../../.next/types/app/layout";
+import { type ReactNode } from "react";
 
-export default function TestLayout({ children }: LayoutProps) {
+export default function TestLayout({ children }: Readonly<{ children: ReactNode }>) {
 	return <div className="border">{children}</div>;
 }
